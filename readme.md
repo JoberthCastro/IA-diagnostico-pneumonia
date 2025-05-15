@@ -22,29 +22,16 @@ As imagens são pré-processadas com:
 ## Resultados do Treinamento
 
 ### Configuração de Treinamento
-- Número de épocas (EPOCHS): **15**
+- Número de épocas (EPOCHS): **50** (conforme definido em `pneumonia_classifier.py`)
 
 ### Métricas de Performance
-- Acurácia no conjunto de teste: 0.8750 (87.50%)
-- Relatório de Classificação:
-  ```
-                precision    recall  f1-score   support
-             0       0.88      0.87      0.87       234
-             1       0.87      0.88      0.87       390
-      accuracy                           0.87       624
-     macro avg       0.87      0.87      0.87       624
-  weighted avg       0.87      0.87      0.87       624
-  ```
+Após a execução do script `pneumonia_classifier.py`, os seguintes artefatos são gerados contendo as métricas de performance detalhadas:
+- **Relatório de Classificação:** Exibido no console.
+- **Matriz de Confusão:** Salva como `confusion_matrix.png`.
+- **Métricas de Classificação (Precisão, Recall, F1-Score):** Salvas como `classification_metrics.png`.
+- **Curva ROC e AUC:** Salvas como `roc_curve.png`.
 
-### Matriz de Confusão
-```
-[[203  31]
- [ 47 343]]
-```
-- Verdadeiros Negativos: 203
-- Falsos Positivos: 31
-- Falsos Negativos: 47
-- Verdadeiros Positivos: 343
+Consulte esses arquivos para obter os resultados da execução mais recente do treinamento.
 
 ### Gráficos Gerados Automaticamente
 O script gera automaticamente os seguintes gráficos para análise de desempenho:
@@ -67,21 +54,24 @@ O script gera automaticamente os seguintes gráficos para análise de desempenho
 │   └── test/
 │       ├── NORMAL/
 │       └── PNEUMONIA/
+├── .git/
+├── .gitattributes
+├── .gitignore
+├── Dataset.rar
+├── best_model.keras
+├── classification_metrics.png
+├── confusion_matrix.png
 ├── pneumonia_classifier.py
+├── readme.md
 ├── requirements.txt
-└── README.md
+├── roc_curve.png
+└── training_history.png
 ```
 
 ## Requisitos
 
 - Python 3.x
-- TensorFlow
-- OpenCV
-- NumPy
-- Matplotlib
-- Seaborn
-- scikit-learn
-- pandas
+- Consulte o arquivo `requirements.txt` para a lista completa de dependências e suas versões.
 
 ## Instalação
 
@@ -100,8 +90,8 @@ python pneumonia_classifier.py
 ```
 
 O script irá:
-- Treinar o modelo por 15 épocas
-- Salvar o melhor modelo como 'best_model.h5'
+- Treinar o modelo (o número de épocas padrão é 50, mas pode ser ajustado no script)
+- Salvar o melhor modelo como 'best_model.keras'
 - Gerar gráficos de treinamento em 'training_history.png'
 - Gerar matriz de confusão em 'confusion_matrix.png'
 - Gerar gráfico de métricas por classe em 'classification_metrics.png'
@@ -145,7 +135,7 @@ Este documento será atualizado conforme o projeto avançar com novas etapas de 
 
 ## 🚧 Status
 
-🔄 Projeto em fase inicial: organização dos dados e planejamento da modelagem.
+✅ Projeto funcional e implementado conforme descrito. As métricas de desempenho e os artefatos de treinamento são gerados a cada execução do script `pneumonia_classifier.py`.
 
 ---
 
