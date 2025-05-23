@@ -5,7 +5,6 @@ Este sistema utiliza inteligência artificial para diagnosticar pneumonia viral 
 ## 🚨 Download do Modelo Treinado
 
 ➡️ O modelo treinado otimizado **`best_model.keras`** pode ser baixado através do seguinte link:  
-
 **[👉 Download do Modelo Treinado](https://drive.google.com/file/d/1jXTWGgX3iQofwEfT4088TGazn4mhYVne/view?usp=drive_link)**
 
 ---
@@ -117,10 +116,16 @@ print(f"Probabilidade de pneumonia viral: {float(probabilidade[0]):.4f}")
 
 ## Métricas do Modelo
 
-- **Acurácia**: > 90%
-- **Precisão**: > 85%
-- **Revocação (Recall)**: > 85%
-- **F1-Score**: > 85%
+| Classe | Precision | Recall | F1-Score | Suporte |
+|--------|----------|-------|---------|--------|
+| **0** (Normal) | 0.98 | 0.97 | 0.97 | 1044 |
+| **1** (Pneumonia Viral) | 0.96 | 0.97 | 0.96 | 785 |
+
+- **Acurácia geral**: 97%  
+- **Média Macro**: Precision 0.97, Recall 0.97, F1-Score 0.97  
+- **Média Ponderada**: Precision 0.97, Recall 0.97, F1-Score 0.97
+
+Total de amostras: **1829**
 
 ## Autores
 
