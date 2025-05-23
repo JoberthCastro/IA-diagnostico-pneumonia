@@ -2,6 +2,14 @@
 
 Este sistema utiliza inteligência artificial para diagnosticar pneumonia viral através de imagens de raio-x do tórax. O modelo foi treinado com um dataset balanceado de imagens normais e casos de pneumonia viral.
 
+## 🚨 Download do Modelo Treinado
+
+➡️ O modelo treinado otimizado **`best_model.keras`** pode ser baixado através do seguinte link:  
+
+**[👉 Download do Modelo Treinado](https://drive.google.com/file/d/1jXTWGgX3iQofwEfT4088TGazn4mhYVne/view?usp=drive_link)**
+
+---
+
 ## Base de Dados
 
 O modelo foi treinado com a base pública disponível em:  
@@ -29,6 +37,7 @@ pip install -r requirements.txt
    - As funções de predição do `classifier.py`
 
 2. Importe as dependências necessárias:
+
 ```python
 import cv2
 import numpy as np
